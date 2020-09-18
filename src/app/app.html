@@ -1,0 +1,43 @@
+<ion-menu [content]="content" [swipeEnabled]="false">
+    <ion-header>
+        <ion-toolbar>
+          <ion-item no-lines>
+            <ion-avatar item-start>
+              <img *ngIf="top_sidebar_colegio_logo_url != null || top_sidebar_colegio_logo_url != ''"src="{{ top_sidebar_colegio_logo_url }}">
+            </ion-avatar>
+            <h2 style="color:white">{{ colegio_nombre }}</h2>
+          </ion-item>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="sidebar">
+        <ion-list>
+            <ion-item color="transparente" no-lines *ngFor="let page of pages; let i=index" menuClose='{{ (page.items.length>0?"false":"") }}' [ngClass]="{active: isLevel1Shown('idx'+i)}" (click)="PageClicked(page, 'idx'+i)">
+
+                <ion-icon name="{{ page.icon }}" padding (click)="(page.items.length == 0)?openPage( page ):null"></ion-icon>
+                <ng-container (click)="openPage( page )"><span class="text-sidebar">{{ page.title }}</span></ng-container>
+
+
+                <ng-container *ngIf="page.items.length > 0">
+                    <ion-icon color="success" item-right [name]="isLevel1Shown('idx'+i) ? 'ios-arrow-down-outline' : 'ios-arrow-forward-outline'" padding></ion-icon>
+
+                    <ion-list *ngIf="isLevel1Shown('idx'+i)">
+                        <ion-item *ngFor="let item of page.items" (click)="openPage( item )" menuClose no-lines text-wrap>
+                            <p text-wrap item-left>{{ item.title }}</p>
+                            <ng-container *ngIf="item.badge!=null && item.badge != '0'">
+                                <ion-badge item-end>{{item.badge}}</ion-badge>
+                            </ng-container>
+                        </ion-item>
+                    </ion-list>
+
+                </ng-container>
+
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

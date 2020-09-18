@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "301000330017",
+    "firebase_url": "https://colegiosapp-1bfb6.firebaseio.com",
+    "project_id": "colegiosapp-1bfb6",
+    "storage_bucket": "colegiosapp-1bfb6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301000330017:android:19eaa128dc3f1114",
+        "android_client_info": {
+          "package_name": "com.zentcode.colegiosApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301000330017-hokd3o6m4adkc8fa92objngsuhi1h1l1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwVQgtxfwOy8vy2AvawSChqIFWFDSCXnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

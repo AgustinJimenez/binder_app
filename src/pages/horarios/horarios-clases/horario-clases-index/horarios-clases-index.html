@@ -1,0 +1,51 @@
+<ion-header>
+  <custom-navbar titulo="{{ nombre_grado_seccion }}"></custom-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="reload_content($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Tire para actualizar"
+      refreshingSpinner="crescent"
+      refreshingText="Recargando...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngIf="horarios_clases.length > 0" no-lines no-padding>
+    <ion-item *ngFor="let horario_clase of horarios_clases; let even=even; let odd = odd" (click)="horario_clase_was_clicked( horario_clase )">
+      <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+            <ion-row>
+              <ion-col col-11>
+                <p text-wrap item-left>{{ horario_clase.seccion_grado_nombre }}</p>
+                <p text-wrap item-left></p>
+              </ion-col>
+              <ion-col col-1 style="margin:auto">
+                <ion-icon class="icono" name="ios-arrow-forward"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="$event.waitFor( doInfinite() )">
+      <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Cargando...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    <ion-item *ngIf="horarios_clases.length < 1 && has_loaded" no-lines>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h2 text-center>No hay horarios que mostrar</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+</ion-content>

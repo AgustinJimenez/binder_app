@@ -1,0 +1,53 @@
+<ion-header>
+    <custom-navbar titulo="EDITAR PERFIL DE USUARIO"></custom-navbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="form" (ngSubmit)="verify_form()">
+        <ion-item-group *ngIf="responsable">
+
+            <ion-item>
+                <ion-label color="dark" stacked>Nombres</ion-label>
+                <ion-input placeholder="Nombres" #nombreInput formControlName="nombre" [attr.maxlength]="60" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark" stacked>Apellidos</ion-label>
+                <ion-input placeholder="Apellidos" required formControlName="apellido" [attr.maxlength]="60" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark" stacked>Número de Teléfono</ion-label>
+                <ion-input placeholder="Número de Teléfono" required formControlName="telefono" [attr.maxlength]="60" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark" stacked>Correo electrónico</ion-label>
+                <ion-input placeholder="Correo electrónico" type="email" required formControlName="email" [attr.maxlength]="60" clearInput></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">Encargado/a
+                    <ion-select formControlName="tipo_encargado" interface="popover" title="Encargado/a">
+                        <ion-option value="papa">Papá</ion-option>
+                        <ion-option value="mama">Mamá</ion-option>
+                        <ion-option value="tutor">Tutor</ion-option>
+                    </ion-select>
+                </ion-label>
+            </ion-item>
+
+            <ion-item>
+                <ion-label color="dark">Grado</ion-label>
+                <ion-select formControlName="secciones_ids" multiple="true" okText="OK" cancelText="Cancelar" title="Grado">
+                    <ion-option *ngFor="let option of grado_options.options" value="{{option.value}}">{{ option.key }}</ion-option>
+                </ion-select>
+            </ion-item>
+
+        </ion-item-group>
+
+        <ion-item-group padding *ngIf="responsable">
+            <button ion-button full type="submit" [disabled]="!form.valid">GUARDAR</button>
+        </ion-item-group>
+
+    </form>
+</ion-content>

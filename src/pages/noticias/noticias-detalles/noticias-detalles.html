@@ -1,0 +1,34 @@
+
+<ion-header>
+  <custom-navbar titulo="NOTICIA"></custom-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngIf="noticia.id!=null">
+
+    <img *ngIf="noticia.archivo != null" src="{{noticia.archivo.path_string}}" height="200px"/>
+
+    <ion-card-header primary>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <h2 text-wrap class="titulo">{{noticia.titulo}}</h2>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-12>
+              <h2 text-wrap class="fecha">{{noticia.fecha}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    </ion-card-header>
+
+    <ion-card-content>
+        <hr>
+        <p class="e2e-inner-html-bound" [innerHTML]="noticia.contenido"></p>
+    </ion-card-content>
+</ion-card>
+
+</ion-content>

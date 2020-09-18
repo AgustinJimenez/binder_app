@@ -1,0 +1,48 @@
+page-perfil-usuario-show {
+ .cerrar-sesion{
+   color: $primary;
+   background: white;
+   border-color: $primary;
+   border-style: solid;
+   border-width: 1px;
+ }
+
+ .item-md.item-input.input-has-focus .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.input-has-focus:last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.input-has-focus:last-child .item-inner {
+  box-shadow: none;
+}
+
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner {
+  box-shadow: none;
+}
+
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+}

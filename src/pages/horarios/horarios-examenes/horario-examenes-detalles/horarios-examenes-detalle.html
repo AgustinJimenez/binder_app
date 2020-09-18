@@ -1,0 +1,27 @@
+<ion-header>
+  <custom-navbar titulo="{{ horario_examen?.seccion_grado_nombre }}"></custom-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngIf="horario_examen?.id!=null">
+    <ion-card-header primary>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h2 text-wrap class="materia">{{ horario_examen?.materia }}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <h2 text-wrap class="fecha">{{ horario_examen?.fecha }}</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <hr>
+      <p class="e2e-inner-html-bound" [innerHTML]="horario_examen?.contenido"></p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,59 @@
+page-aviso-index {
+  .scroll-content {
+    background-color: $grey-light2;
+  }
+  .even {
+    border-left-style: solid;
+    border-left-color:$primary;
+  }
+  .odd {
+    border-left-style: solid;
+    border-left-color:$secondary;
+  }
+.fecha {
+  font-weight: normal;
+  font-size: 13px;
+  text-align:left;
+  color:white;
+}
+.icono {
+  color: white;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.titulo {
+  text-transform:uppercase;
+  font-weight: bold;
+  font-weight: 500;
+  color:white;
+}
+.visto-bg {
+  background-color:white;
+}
+
+.visto-bg .titulo {
+  font-weight: 500;
+  color: $primary;
+}
+.visto-bg .fecha{
+  font-weight: 500;
+  color:$grey2;
+}
+.visto-bg .icono{
+  color:$grey2;
+}
+
+.no-visto-bg{
+  background: $primary;
+background: -moz-linear-gradient(left, $primary 0%, $secondary 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, $primary), color-stop(100%, $secondary));
+background: -webkit-linear-gradient(left, $primary 0%, $secondary 100%);
+background: -o-linear-gradient(left, $primary 0%, $secondary 100%);
+background: -ms-linear-gradient(left, $primary 0%, $secondary 100%);
+background: linear-gradient(to right, $primary 0%, $secondary 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary, endColorstr=$secondary, GradientType=1 );
+}
+
+}

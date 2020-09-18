@@ -1,0 +1,62 @@
+page-aviso-detalles {
+.scroll-content {
+  background-color: $grey-light2;
+}
+
+.alinear{text-align: center}
+.card-md h2 { font-size: 14px;}
+// .boton-noleido-grace{
+//   background: rgba(45,149,219,1);
+// background: -moz-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,149,219,1)), color-stop(100%, rgba(0,37,118,1)));
+// background: -webkit-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -o-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -ms-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: linear-gradient(to right, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d95db', endColorstr='#002576', GradientType=1 );
+// }
+.boton-noleido{
+  background: $secondary;
+background: -moz-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, $secondary), color-stop(100%, $primary));
+background: -webkit-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -o-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -ms-linear-gradient(left, $secondary 0%, $primary 100%);
+background: linear-gradient(to right, $secondary 0%, $primary 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr=$primary, GradientType=1 );
+}
+// .boton-leido{
+//   background: transparent;
+//   color: $celeste;
+//   border-style: solid;
+//   border-width: thin;
+//   border-color: $celeste;
+// }
+.boton-leido{
+  background: transparent;
+  color: $secondary;
+  border-style: solid;
+  border-width: thin;
+  border-color: $secondary;
+}
+.fecha, .grado{
+  color:grey;
+  // font-weight: 500;
+  font-size: 12px !important;
+}
+.firma{
+  font-weight: 500;
+  color: black;
+}
+.iconos{
+  color:grey;
+  font-size: 25px;
+}
+.titulo{
+  font-weight: 500;
+  font-size: 15px;
+  color: $secondary;
+  color: black;
+  text-transform: uppercase;
+}
+}

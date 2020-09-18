@@ -1,0 +1,3 @@
+copiar el token de la base de datos del colegio al archivo colegios_app/src/providers/config/credentials.ts
+cambiar la ruta (api_url) en colegios_app/src/providers/config/routes.ts
+cambiar el sender id en la app (verificar)

@@ -1,0 +1,4 @@
+-IMAGENES EN colegios_app/www/assets/imgs
+-URL DE SERVIDOR EN colegios_app/src/providers/config/routes.ts (api_url)
+-TOKEN DE COLEGIO EN colegios_app/src/providers/config/credentials.ts (ya no más)
+-ARCHIVO DE CONFIG DE FIREBASE ANDROID colegios_app/google-services.json (REEMPLAZAR)

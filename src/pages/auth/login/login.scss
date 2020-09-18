@@ -1,0 +1,84 @@
+page-login {
+//   .boton-login-grace{
+//     background: rgba(45,149,219,1);
+// background: -moz-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,149,219,1)), color-stop(100%, rgba(0,37,118,1)));
+// background: -webkit-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -o-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: -ms-linear-gradient(left, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// background: linear-gradient(to right, rgba(45,149,219,1) 0%, rgba(0,37,118,1) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d95db', endColorstr='#002576', GradientType=1 );
+//   }
+
+  .boton-login{
+    background: $secondary;
+background: -moz-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, $secondary), color-stop(100%, $primary));
+background: -webkit-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -o-linear-gradient(left, $secondary 0%, $primary 100%);
+background: -ms-linear-gradient(left, $secondary 0%, $primary 100%);
+background: linear-gradient(to right, $secondary 0%, $primary 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$secondary, endColorstr=$primary, GradientType=1 );
+  }
+
+  .enlace-crear1{
+    color: grey;
+    font-weight: 500;
+  }
+  .enlace-crear2{
+    color: $secondary;
+    font-weight: 500;
+  }
+  .enlace-olvide{
+    font-size: 12px;
+    color: $secondary;
+  }
+  .enlace-volver{
+    color: grey;
+    color: $secondary;
+    font-weight: 100;
+    font-size: 14px;
+  }
+  // .fondo-grace{
+  //   background-color:$grey-light2;
+  //   background: rgba(0,37,118,1);
+  //   background: -moz-linear-gradient(top, rgba(0,37,118,1) 0%, rgba(45,149,219,1) 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+  //   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,37,118,1)), color-stop(50%, rgba(45,149,219,1)), color-stop(50%, rgba(236,241,247,1)), color-stop(100%, rgba(236,241,247,1)));
+  //   background: -webkit-linear-gradient(top, rgba(0,37,118,1) 0%, rgba(45,149,219,1) 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+  //   background: -o-linear-gradient(top, rgba(0,37,118,1) 0%, rgba(45,149,219,1) 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+  //   background: -ms-linear-gradient(top, rgba(0,37,118,1) 0%, rgba(45,149,219,1) 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+  //   background: linear-gradient(to bottom, rgba(0,37,118,1) 0%, rgba(45,149,219,1) 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+  //   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002576', endColorstr='#ecf1f7', GradientType=0 );
+  // }
+
+  .fondo{
+    background-color:$grey-light2;
+    background: $primary;
+    background: -moz-linear-gradient(top, $primary 0%, $secondary 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $primary), color-stop(50%, $secondary), color-stop(50%, rgba(236,241,247,1)), color-stop(100%, rgba(236,241,247,1)));
+    background: -webkit-linear-gradient(top, $primary 0%, $secondary 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+    background: -o-linear-gradient(top, $primary 0%, $secondary 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+    background: -ms-linear-gradient(top, $primary 0%, $secondary 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+    background: linear-gradient(to bottom, $primary 0%, $secondary 50%, rgba(236,241,247,1) 50%, rgba(236,241,247,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary, endColorstr='#ecf1f7', GradientType=0 );
+  }
+  .linea{
+    border-bottom-style:solid;
+    border-width: thin;
+    border-color:$grey-light;
+  }
+  .text-input::-moz-placeholder {
+    color:$grey-light;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color:$grey-light;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color:$grey-light;
+    font-size: 14px;
+  }
+
+}

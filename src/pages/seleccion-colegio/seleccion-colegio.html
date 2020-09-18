@@ -1,0 +1,40 @@
+
+
+
+<ion-content padding class="sidebar">
+
+  <ion-item divider no-lines></ion-item>
+
+  <ion-item no-lines text-center>
+    <img src="assets/imgs/logo_appcolegios.png" width="200px" height="150px">
+    <h2 class="logo">Binder</h2>
+  </ion-item>
+<ion-item divider></ion-item>
+  <ion-searchbar
+    [(ngModel)]="nombre"
+    debounce="500"
+    (ionInput)="search_colegios( false )"
+    placeholder="Buscar Colegio"
+    type="text"
+    no-padding no-lines>
+  </ion-searchbar>
+
+  <ion-list *ngIf="colegios.length > 0" class="list-colegios">
+    <ion-item *ngFor="let colegio of colegios" (click)="colegio_was_clicked( colegio.token )">
+      {{ colegio.nombre }}
+      <img *ngIf="colegio.imagen_url != null" item-right src="{{ colegio.imagen_url }}" width="50px" height="50px" style="border-radius: 50%;">
+      <ion-icon item-right name="ios-arrow-forward" color="primary"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-item no-lines text-center>
+    <ion-spinner name="crescent" color="light" text-center no-padding ng-container *ngIf="show_loading_spinner == true && colegios.length == 0"></ion-spinner>
+  </ion-item>
+
+  <ion-item *ngIf="colegios.length == 0 && searched == true " no-lines>
+    <h2 text-center class="white-text">No se encontraron colegios</h2>
+  </ion-item>
+
+  <button *ngIf="show_contacto_button == true" ion-button ion-fixed full clear color="light" class="contacto" (click)="contacto_was_clicked()" style="position: absolute; bottom: 0px;">Contacto</button>
+
+</ion-content>

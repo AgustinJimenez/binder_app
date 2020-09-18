@@ -1,0 +1,16 @@
+<ion-header>
+  <custom-navbar titulo="{{ horario_clase?.seccion_grado_nombre }}"></custom-navbar>
+</ion-header>
+
+
+<ion-content no-lines>
+  <ion-card *ngIf="horario_clase?.id!=null" no-lines>
+
+    <ng-container *ngIf="horario_clase?.imagen_url == null" no-lines>
+      El horario de clase no tiene imagen
+    </ng-container>
+
+    <img *ngIf="horario_clase?.imagen_url != null" src="{{horario_clase?.imagen_url }}" height="200px"/>
+
+</ion-card>
+</ion-content>

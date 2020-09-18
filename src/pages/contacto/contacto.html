@@ -1,0 +1,38 @@
+
+<ion-header>
+    <custom-navbar titulo="Contacto"></custom-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="contact_form" (ngSubmit)="enviar()">
+
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input #nombreInput required formControlName="nombre" [attr.maxlength]="60" clearInput></ion-input>
+    <!--
+      <ion-icon name="ios-medical-outline" item-right small></ion-icon>
+    -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Institución</ion-label>
+      <ion-input required formControlName="institucion" [attr.maxlength]="60" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input type="email" required formControlName="email" [attr.maxlength]="60" clearInput></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Número</ion-label>
+      <ion-input type="tel" required formControlName="numero" [attr.maxlength]="60" clearInput></ion-input>
+    </ion-item>
+
+    <br>
+    <button ion-button full type="submit" [disabled]="!contact_form.valid" clearInput>Enviar</button>
+
+  </form>
+
+</ion-content>

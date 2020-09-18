@@ -1,0 +1,57 @@
+page-home {
+  .scroll-content {
+    background-color: $grey-light2;
+  }
+
+  .aviso {
+    background: $primary;
+    background: -moz-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, $primary), color-stop(100%, $secondary));
+    background: -webkit-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -o-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: -ms-linear-gradient(left, $primary 0%, $secondary 100%);
+    background: linear-gradient(to right, $primary 0%, $secondary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$primary, endColorstr=$secondary, GradientType=1 );
+
+  }
+  .aviso .titulo {
+    text-transform:uppercase;
+    font-weight: 500;
+    color:white;
+  }
+  .aviso .fecha{
+    font-weight: normal;
+    font-size: 13px;
+    text-align: left;
+    color:white;
+  }
+  .aviso .icono{
+    color:white;
+  }
+
+  .noticia .titulo {
+    font-weight: 500;
+    color:$primary;
+    text-transform: uppercase;
+  }
+  .noticia .fecha {
+    font-weight: 500;
+    font-size: 13px;
+    color:$grey2;
+  }
+  .noticia .icono {
+    color:$grey2;
+  }
+  .titulo1{ padding-left: 28px;}
+  .titulo2{
+    font-size: 15px;
+    // font-weight: 500;
+    text-transform: uppercase;
+    color:#222222;
+    color:grey;
+  }
+  .icono{
+    color: $primary;
+    font-size: 20px;}
+  .label {margin:0px !important;}
+}

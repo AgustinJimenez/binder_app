@@ -1,0 +1,76 @@
+<ion-header>
+  <custom-navbar titulo="Inicio"></custom-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-item no-line *ngIf="last_noticia == null && avisos_no_leidos.length == 0 && has_loaded == true">
+      <h2 text-center>No hay datos que mostrar</h2>
+    </ion-item>
+
+  <ion-list *ngIf="last_noticia != null" no-lines no-padding>
+    <ion-item no-margin>
+      <ion-card (click)="last_noticia_was_clicked( last_noticia )" class="noticia">
+
+          <!-- <img  src="{{ (last_noticia.archivo != null)? last_noticia.archivo.path_string :'assets/imgs/blank.png' }}" height="200px"/> -->
+          <div *ngIf="last_noticia?.archivo != null">
+            <img  src="{{last_noticia.archivo.path_string}}" height="200px"/>
+          </div>
+          <ion-card-content>
+              <ion-row>
+                  <ion-col col-11>
+                      <p text-wrap item-left class="titulo">{{ last_noticia?.titulo }}</p>
+                      <p text-wrap item-right class="fecha">{{ last_noticia?.fecha }}</p>
+                  </ion-col>
+                  <ion-col col-1 style="margin:auto">
+                    <ion-icon class="icono" name="ios-arrow-forward"></ion-icon>
+                  </ion-col>
+              </ion-row>
+          </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+    <!-- </ion-item> -->
+    <ion-item *ngIf="avisos_no_leidos.length > 0" no-lines no-margin class="titulo1">
+        <ion-icon name="ios-mail-outline" class="icono"></ion-icon> <span class="titulo2"> Avisos no leídos</span>
+    </ion-item>
+
+    <ion-refresher (ionRefresh)="reload_avisos_no_leidos_content($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Tire para actualizar"
+          refreshingSpinner="crescent"
+          refreshingText="Recargando...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+    <ion-list *ngIf="avisos_no_leidos.length > 0" no-lines no-padding>
+      <ion-item *ngFor="let aviso of avisos_no_leidos;" (click)="aviso_was_clicked(aviso)" no-margin>
+
+        <ion-card class="aviso">
+          <ion-card-content>
+            <ion-card-title>
+              <ion-row>
+                <ion-col col-11>
+                  <p text-wrap item-left class="titulo">{{ aviso?.titulo }}</p>
+                  <p text-wrap item-left class="fecha">{{ aviso?.fecha }}</p>
+                </ion-col>
+                <ion-col col-1 style="margin:auto">
+                  <ion-icon class="icono" name="ios-arrow-forward"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="$event.waitFor( doInfinite() )">
+        <ion-infinite-scroll-content
+        loadingSpinner="crescent"
+        loadingText="Cargando..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

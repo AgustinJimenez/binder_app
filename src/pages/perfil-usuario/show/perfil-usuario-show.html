@@ -1,0 +1,45 @@
+<ion-header>
+    <custom-navbar titulo="Perfil"></custom-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item-group *ngIf="responsable">
+        <ion-item>
+            <ion-label color="primary" stacked>Nombres</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Apellidos</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Número de Teléfono</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.telefono"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Correo electrónico</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.user.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Encargado/a</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.tipo_encargado"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Suscrito a</ion-label>
+            <ion-input readonly [(ngModel)]="responsable.grado_secciones_lista"></ion-input>
+        </ion-item>
+    </ion-item-group>
+
+    <ion-item-group padding>
+      <button ion-button full (click)="go_to_perfil_usuario_edit()" *ngIf="responsable">Editar</button>
+      <ion-item divider no-lines></ion-item>
+      <button ion-button full (click)="logout()" class="cerrar-sesion">Cerrar sesión</button>
+    </ion-item-group>
+
+</ion-content>
